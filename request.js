@@ -25,20 +25,20 @@ var Request = {
     request: function(host) {
         
        var self     = this,                   // maps to ourself
-            options  = {                      // options for the request
-                "uri"            : host,      // hostname to visit
-                "timeout"        : 15000,     // initial timeout
-                "maxRedirects"   : 2,         // max redirects allowed
-                "followRedirect" : true,       // follow the redirects (if any) 
-		"headers"        : {'user-agent': 'Mozilla/5.0'},
-            },
-            internals   = [],                 // internal links container
-            masters     = [],                 // master backlinks container
-            header_info = {},                 // page headers
-            status_info = {},                 // page staus  
-            status      = 0,                  // page response status  
-            redirect    = {},                 // redirect container
-            $           = null;               // maps to cheerio (jQuery on the server)  
+       options  = {                      // options for the request
+         "uri"            : host,      // hostname to visit
+         "timeout"        : 15000,     // initial timeout
+         "maxRedirects"   : 2,         // max redirects allowed
+         "followRedirect" : true,       // follow the redirects (if any) 
+	 "headers"        : {'user-agent': 'Mozilla/5.0'},
+       },
+       internals   = [],                 // internal links container
+       masters     = [],                 // master backlinks container
+       header_info = {},                 // page headers
+       status_info = {},                 // page staus  
+       status      = 0,                  // page response status  
+       redirect    = {},                 // redirect container
+       $           = null;               // maps to cheerio (jQuery on the server)  
         
         var page = host;           // url.parse is a handy feature (splits a url into its component parts)
 
