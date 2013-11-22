@@ -30,7 +30,7 @@ var Request = {
                 "timeout"        : 15000,     // initial timeout
                 "maxRedirects"   : 2,         // max redirects allowed
                 "followRedirect" : true,       // follow the redirects (if any) 
-				"headers": {'user-agent': 'Mozilla/5.0'},
+		"headers"        : {'user-agent': 'Mozilla/5.0'},
             },
             internals   = [],                 // internal links container
             masters     = [],                 // master backlinks container
