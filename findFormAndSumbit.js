@@ -57,7 +57,7 @@ var formFinder = {
         page.set('settings.userAgent', 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11');
         page.set('settings.javascriptEnabled', true);
         page.set('settings.loadImages', true);
-        page.set('cookiesFile', '/home/ibbo/cookies.txt');
+        page.set('cookiesFile', '/tmp/cookies.txt');
 
         page.set('onConsoleMessage', function (msg) {
             console.log(msg);
